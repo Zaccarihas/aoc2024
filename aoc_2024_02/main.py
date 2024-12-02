@@ -46,11 +46,8 @@ def secondStar(pdata):
         if safe(report):
             answer += 1
         else:
-            print("Not safe report - testing to remove levels")
             for idx in range(len(report)):
-                print(f"Remove level {idx}")
                 testreport = report[:]
-                print(f"Report copy: {testreport}")
                 testreport.pop(idx)
                 if safe(testreport):
                     answer += 1
